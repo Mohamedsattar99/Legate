@@ -1,0 +1,58 @@
+<div class="card card-body bg-light mb-2 mt-2 container">
+    <div class="row">
+      <div class="col-md-3">
+        <strong>User name:</strong>
+      </div>
+      <div class="col-md-3">
+        {{userDetails?.name}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <strong>joining Date:</strong>
+      </div>
+      <div class="col-md-3">
+        {{userDetails?.joiningDate | date: 'dd/MM/yyyy'}}
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+          <strong>Address:</strong>
+        </div>
+        <div class="col-md-3">
+          {{userDetails?.address}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+          <strong>Phone:</strong>
+        </div>
+        <div class="col-md-3">
+          {{userDetails?.phone}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+          <strong>Age:</strong>
+        </div>
+        <div class="col-md-3">
+          {{userDetails?.age}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+          <strong>Salary:</strong>
+        </div>
+        <div class="col-md-3">
+          {{userDetails?.salary}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+          <strong>Postion</strong>
+        </div>
+        <div class="col-md-3">
+          {{userDetails?.postion}}
+        </div>
+    </div>
+</div>

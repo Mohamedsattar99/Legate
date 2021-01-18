@@ -1,0 +1,88 @@
+<div class="container">
+    <form [formGroup]="userForm" autocomplete="off" novalidate (ngSubmit)="updateUser(userForm.value)">
+     <div class="form-horizontal card card-body bg-light mb-2 mt-2">
+        <div class="row form-group">
+            <label for="name" class="control-label col-md-2">Name of User</label>
+            <div class="col-md-5">
+                <input type="text" formControlName="name" id="name" class="form-control" />
+            </div>
+            <div class="col-md-5">
+                <em *ngIf="validateControl('name') && hasError('name', 'required')">Name is required</em>
+                <em *ngIf="validateControl('name') && hasError('name', 'maxlength')">Maximum allowed length is 60 characters.</em>
+              </div>
+        </div>
+        <div class="form-group row">
+            <label for="address" class="control-label col-md-2">Address: </label>
+            <div class="col-md-5">
+              <input type="text" formControlName="address" id="address" class="form-control" />
+            </div>
+            <div class="col-md-5">
+              <em *ngIf="validateControl('address') && hasError('address', 'required')">Address is required</em>
+              <em *ngIf="validateControl('address') && hasError('address', 'maxlength')">Maximum allowed length is 25 characters.</em>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="postion" class="control-label col-md-2">Postion: </label>
+            <div class="col-md-5">
+              <input type="text" formControlName="postion" id="postion" class="form-control" />
+            </div>
+            <div class="col-md-5">
+              <em *ngIf="validateControl('postion') && hasError('postion', 'required')">Postion is required</em>
+              <em *ngIf="validateControl('postion') && hasError('postion', 'maxlength')">Maximum allowed length is 25 characters.</em>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="age" class="control-label col-md-2">Age: </label>
+            <div class="col-md-5">
+              <input type="text" formControlName="age" id="age" class="form-control" />
+            </div>
+            <div class="col-md-5">
+              <em *ngIf="validateControl('age') && hasError('age', 'required')">Age is required</em>
+              <em *ngIf="validateControl('age') && hasError('age', 'pattern')">Please, Enter Two Numbers.</em>
+
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="phone" class="control-label col-md-2">Phone: </label>
+            <div class="col-md-5">
+              <input type="text" formControlName="phone" id="phone" class="form-control" />
+            </div>
+            <div class="col-md-5">
+              <em *ngIf="validateControl('phone') && hasError('phone', 'required')">Phone is required</em>
+              <em *ngIf="validateControl('phone') && hasError('phone', 'pattern')">Please, Enter 10 digit Mobile Number.</em>
+
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="salary" class="control-label col-md-2">Salary: </label>
+            <div class="col-md-5">
+              <input type="text" formControlName="salary" id="salary" class="form-control" />
+            </div>
+            <div class="col-md-5">
+              <em *ngIf="validateControl('salary') && hasError('salary', 'required')">Salary is required</em>
+              <em *ngIf="validateControl('salary') && hasError('salary', 'pattern')">Please, Enter only Number.</em>
+
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="joiningDate" class="control-label col-md-2">Joinin Date: </label>
+            <div class="col-md-5">
+              <input type="date" formControlName="joiningDate" id="joingDate" class="form-control" />
+            </div>
+            <div class="col-md-5">
+              <em *ngIf="validateControl('joiningDate') && hasError('joiningDate', 'required')">joining Date is required</em>
+            </div>
+        </div>
+        <br><br>
+   
+        <div class="form-group row">
+            <div class="offset-5 col-md-1">
+                <button type="submit" class="btn btn-info" [disabled]="!userForm.valid">Save</button>
+            </div>
+            <div class="col-md-1">
+                <button type="button" class="btn btn-danger" (click)="redirectToUserList()">Cancel</button>
+            </div>
+        </div>
+     </div>
+    </form>
+</div>

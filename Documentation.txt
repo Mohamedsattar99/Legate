@@ -1,0 +1,12 @@
+Prerequisites and Installation requirements: 
+ I used: Visual studio 2019  
+Clone or Pull Last Version from git Repository: 
+In order to get data base in your machine:
+Replace default connection in appsetting.json file with your one and make API project is a startup.
+ Change connection in Dbcontext class with your own.  
+Attach Database Bakup  or Run migration command. 
+Run Application either IIS, Web browser
+  Run Swagger UI: 
+http://localhost:56927/Swagger/index.html
+Install node Module
+Run Angular

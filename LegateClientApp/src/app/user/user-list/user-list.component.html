@@ -1,0 +1,31 @@
+
+    <div class="container"> <div class="row" >
+      <div class="col-md-12">
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>User name</th>
+                <th>User address</th>
+             <!--   <th>Joining Date </th>-->
+                <th>Details</th>
+                <th>Update</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of users">
+                <td>{{user.name}}</td>
+                <td>{{user.address}}</td>
+                <!--<td>{{owner.joiningDate | date: 'dd/MM/yyyy'}}</td>-->
+                <td><button type="button" id="details" class="btn btn-light" (click)="getUserDetails(user.id)">Details</button></td>
+                <td><button type="button" id="update" class="btn btn-success" (click)="redirectToUpdatePage(user.id)">Update</button></td>
+                <td><button type="button" id="delete" class="btn btn-danger" (click)="redirectToDeletePage(user.id)">Delete</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
